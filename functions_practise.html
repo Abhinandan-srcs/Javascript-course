@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      functions Practise
+    </title>
+  </head>
+
+  <body>
+    
+    <script>
+        
+      function greet(name){
+        console.log(`Hello ${name}`);
+        if(name=undefined){
+          console.log('Hello there');
+        }
+      }
+      greet(name='Abhi');
+      greet();
+
+      function convertToF(celsius){
+        const Fahrenheit = (celsius*9/5)+32
+        console.log (`${Fahrenheit}F`);
+      }
+
+      //convertToF(25);
+
+      function convertToC(Fahrenheit){
+        const celsius = (Fahrenheit-32)*5/9
+        console.log (`${celsius}C`);
+      }
+
+      //convertToC(25);
+
+
+      function convertTemp(degree,unit){
+        if (unit==='C'){
+          convertToF(degree);
+        }
+
+        if(unit=='F'){
+          convertToC(degree);
+        }
+      }
+      convertTemp(25,'C');
+      convertTemp(86,'F');
+
+
+      function convertLength(length, from, to) {
+
+        if (from === 'miles' && to === 'km') {
+          let result = 1.6 * length;
+          return `${result} km`;
+        }
+
+        if (from === 'km' && to === 'miles') {
+          let result = 0.62 * length;
+          return `${result} miles`;
+
+        }
+
+      }
+      console.log(convertLength(10, 'miles', 'km'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boolean practise</title>
+
+  </head>
+
+  <body>
+    <button onclick="
+      let result='';
+      let guess='Heads';
+      if(random>=0 && random < 0.5){
+        result='Heads';
+      }
+
+      else if(random >=0.5 && random<1){
+        result='Tails'
+      }
+
+      if(guess===result){
+        alert(` result:${result}\n  You won `);
+      }
+      else{
+        alert(`You lost`);
+      }
+    
+      
+      ">Flip a coin</button>
+    <script>
+      let random =Math.random();
+      let computer_move='';
+    </script>
+  </body>
+</html>
