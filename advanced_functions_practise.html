@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="change();">
+      start
+    </button>
+
+    <button onclick="displayMessage();">Add to cart</button>
+    <p class="js-message"></p>
+    <script>
+      /*
+      const add = function() {
+        console.log(2 + 3);
+      };
+
+      add();
+      add();
+
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+
+      runTwice(function() {
+        console.log('12b');
+      });
+      
+      runTwice(add);
+      */
+     function change(){
+      document.querySelector('button')
+        .innerHTML='Loading...';
+       setTimeout(function(){
+      document.querySelector('button')
+      .innerHTML='finished'
+     },2000); 
+
+     }
+     
+      let timeoutId;
+
+      function displayMessage() {
+        const messageElement = document.querySelector('.js-message');
+        messageElement.innerHTML = 'Added';
+
+        // First, cancel the previous timeout so that
+        // it doesn't remove the message too quickly.
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(function() {
+          messageElement.innerHTML = '';
+        }, 2000);
+      }
+
+      function title(){
+        setInterval(function(){
+          document.title='New Messages';
+        },1000)
+      }
+      title();
+    
+    
+    const muntilply=(a,b)=> 2*3;
+    console.log(muntilply(2,3));
+
+function countPostive(arr){
+  let positive=0;
+
+  arr.forEach(num => {
+    if (num>0){
+      positive++;
+    }
+    
+    
+  });
+  return positive;
+}
+
+console.log(countPostive(arr=[-1,-2,3]));
+
+function addNum(arr,num){
+  let result =arr.map(num=>num+2);
+  return result
+}
+console.log(addNum([1,2,3],2));
+
+function removeEgg(arr){
+  let count=0
+   return arr.filter(food=>{
+    
+    if (food==='egg' && count<2){
+      count++;
+      return false;
+    }
+    return true;
+  });
+}
+console.log(removeEgg(['egg','egg','egg','ham']));
+    </script>
+  </body>
+</html>
